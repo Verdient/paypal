@@ -1,0 +1,30 @@
+{
+    "name": "verdient/paypal",
+    "description": "paypal",
+    "type": "library",
+    "keywords": [
+        "PayPal"
+    ],
+    "homepage": "https://github.com/Verdient/paypal",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Verdient.",
+            "email": "fagui.zhu@foxmail.com",
+            "homepage": "https://github.com/Verdient"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Verdient/paypal/issues",
+        "source": "https://github.com/Verdient/paypal"
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "verdient/http-api": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Verdient\\PayPal\\": "src"
+        }
+    }
+}
