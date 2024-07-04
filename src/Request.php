@@ -74,6 +74,9 @@ class Request extends HttpRequest
         $request->setMethod('POST');
         $request->bodySerializer = UrlencodedBodySerializer::class;
         $request->setBody(['grant_type' => 'client_credentials']);
+        if ($this->proxyHost) {
+            $request->setProxy($this->proxyHost, $this->proxyPort);
+        }
         $res = $request->send();
         if ($res->getStatusCode() != 200) {
             $body = $res->getBody();
