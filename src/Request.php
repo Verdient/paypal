@@ -57,7 +57,7 @@ class Request extends HttpRequest
         }
         $cacheKey = 'PayPal-BearerToken-' . md5($this->clientId) . '-' . md5($this->clientSecret);
         $cachePath = $dir . DIRECTORY_SEPARATOR . $cacheKey;
-        if (file_exists($cacheKey)) {
+        if (file_exists($cachePath)) {
             $accessToken = unserialize(file_get_contents($cachePath));
             if ($accessToken && $accessToken instanceof AccessToken) {
                 if ($accessToken->isExpired()) {
